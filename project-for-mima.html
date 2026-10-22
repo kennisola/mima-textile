@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <img src="mima-logo.jpg" alt="Mima Textile Logo" width="180">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mima Textile | Luxury Home Textiles</title>
+  <meta
+    name="description"
+    content="Discover premium bedsheets, duvets, towels, and special textile packages from Mima Textile."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --black: #10201d;
+      --black-soft: #18312b;
+      --charcoal: #244139;
+      --emerald: #155447;
+      --emerald-light: #287563;
+      --gold: #d5b16b;
+      --gold-light: #efd596;
+      --cream: #f8f4ea;
+      --cream-muted: #ddd6c6;
+      --white: #fffdf8;
+      --whatsapp: #25d366;
+      --shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Montserrat", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: var(--sans);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 48px;
+    }
+
+    .section-heading h2 {
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: clamp(2.7rem, 6vw, 4.5rem);
+      font-weight: 500;
+      line-height: 0.98;
+      margin: 14px 0 18px;
+    }
+
+    .section-heading p {
+      color: var(--cream-muted);
+      font-size: 0.95rem;
+      max-width: 570px;
+    }
+
+    .button {
+      align-items: center;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      gap: 10px;
+      justify-content: center;
+      letter-spacing: 0.12em;
+      min-height: 52px;
+      padding: 14px 22px;
+      text-transform: uppercase;
+      transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .button-gold:hover {
+      background: var(--gold-light);
+    }
+
+    .button-outline {
+      border-color: rgba(228, 200, 134, 0.65);
+      color: var(--gold-light);
+    }
+
+    .button-outline:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* Header */
+    .site-header {
+      background: rgba(16, 32, 29, 0.88);
+      border-bottom: 1px solid rgba(201, 164, 93, 0.18);
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+    }
+
+    .navbar {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      min-height: 82px;
+    }
+
+    .brand {
+      align-items: center;
+      display: flex;
+      gap: 13px;
+    }
+
+    .brand-logo {
+      height: 53px;
+      object-fit: contain;
+      width: 53px;
+    }
+
+    .brand-name {
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      letter-spacing: 0.03em;
+      line-height: 1;
+    }
+
+    .brand-subtitle {
+      color: var(--gold);
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.27em;
+      margin-top: 5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      align-items: center;
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--cream-muted);
+      font-size: 0.71rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .menu-toggle {
+      background: transparent;
+      border: 1px solid rgba(228, 200, 134, 0.45);
+      color: var(--gold-light);
+      cursor: pointer;
+      display: none;
+      font-size: 1.3rem;
+      height: 42px;
+      width: 42px;
+    }
+
+    /* Hero */
+    .hero {
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(16, 32, 29, 0.82), rgba(16, 32, 29, 0.35)),
+        url("img/mima-luxury-bedding-hero.jpg") center / cover no-repeat;
+      display: flex;
+      min-height: 680px;
+      overflow: hidden;
+      padding: 120px 0 70px;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+      margin: 20px 0 24px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+      display: block;
+      font-size: 0.68em;
+      font-style: italic;
+    }
+
+    .hero-description {
+      color: var(--cream-muted);
+      font-size: 1rem;
+      max-width: 540px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    /* Intro strip */
+    .intro-strip {
+      background: var(--gold);
+      color: var(--black);
+      padding: 18px 0;
+    }
+
+    .intro-strip-inner {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .intro-strip p {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+    }
+
+    .intro-strip span {
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    /* Catalogue */
+    .catalogue {
+      padding: 115px 0;
+    }
+
+    .product-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-card {
+      background: var(--charcoal);
+      border: 1px solid rgba(201, 164, 93, 0.2);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      border-color: rgba(228, 200, 134, 0.7);
+      transform: translateY(-8px);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .product-card.reveal:nth-child(2) { transition-delay: 0.08s; }
+    .product-card.reveal:nth-child(3) { transition-delay: 0.16s; }
+    .product-card.reveal:nth-child(4) { transition-delay: 0.24s; }
+    .product-card.reveal:nth-child(5) { transition-delay: 0.32s; }
+
+    .product-card.reveal.is-visible:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image {
+      align-items: center;
+      background:
+        linear-gradient(135deg, rgba(21, 91, 78, 0.8), rgba(7, 18, 17, 0.95)),
+        repeating-linear-gradient(
+          45deg,
+          transparent 0,
+          transparent 12px,
+          rgba(228, 200, 134, 0.06) 13px,
+          transparent 14px
+        );
+      color: var(--gold-light);
+      display: flex;
+      height: 280px;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .product-image::before {
+      border: 1px solid rgba(228, 200, 134, 0.45);
+      content: "";
+      height: calc(100% - 34px);
+      position: absolute;
+      width: calc(100% - 34px);
+    }
+
+    .product-image span {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      position: relative;
+      text-transform: uppercase;
+    }
+
+    .product-image img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .catalogue-group + .catalogue-group {
+      margin-top: 80px;
+    }
+
+    .catalogue-group-title {
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: 2.7rem;
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .product-info {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 25px;
+    }
+
+    .product-category {
+      color: var(--gold);
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .product-info h3 {
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 500;
+      line-height: 1.05;
+      margin: 9px 0 14px;
+    }
+
+    .product-price {
+      color: var(--gold-light);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+
+    .product-info .button {
+      margin-top: auto;
+      width: 100%;
+    }
+
+    /* Packages */
+    .packages {
+      background:
+        linear-gradient(rgba(16, 32, 29, 0.72), rgba(16, 32, 29, 0.82)),
+        radial-gradient(circle at center, var(--emerald-light), var(--black));
+      border-block: 1px solid rgba(201, 164, 93, 0.2);
+      padding: 115px 0;
+    }
+
+    .packages .section-heading {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .packages .section-heading p {
+      margin-inline: auto;
+    }
+
+    .packages .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .package-card {
+      background: rgba(36, 65, 57, 0.92);
+    }
+
+    .package-card .product-image {
+      aspect-ratio: 2 / 3;
+      background:
+        linear-gradient(135deg, rgba(213, 177, 107, 0.38), rgba(16, 32, 29, 0.82)),
+        repeating-linear-gradient(
+          -45deg,
+          transparent 0,
+          transparent 14px,
+          rgba(228, 200, 134, 0.08) 15px,
+          transparent 16px
+        );
+      height: auto;
+    }
+
+    .package-card .product-image img {
+      object-fit: contain;
+    }
+
+    .package-badge {
+      background: var(--gold);
+      color: var(--black);
+      font-size: 0.62rem;
+      font-weight: 700;
+      left: 17px;
+      letter-spacing: 0.12em;
+      padding: 8px 11px;
+      position: absolute;
+      text-transform: uppercase;
+      top: 17px;
+      z-index: 1;
+    }
+
+    /* Contact */
+    .contact {
+      padding: 115px 0;
+    }
+
+    .contact-box {
+      align-items: center;
+      background:
+        linear-gradient(120deg, rgba(40, 117, 99, 0.82), rgba(16, 32, 29, 0.74)),
+        var(--emerald);
+      border: 1px solid rgba(228, 200, 134, 0.4);
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      overflow: hidden;
+      padding: 65px;
+      position: relative;
+    }
+
+    .contact-box::after {
+      border: 1px solid rgba(228, 200, 134, 0.24);
+      content: "";
+      height: 300px;
+      position: absolute;
+      right: -120px;
+      top: -100px;
+      transform: rotate(45deg);
+      width: 300px;
+    }
+
+    .contact-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-content h2 {
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 500;
+      line-height: 0.95;
+      margin: 15px 0 18px;
+    }
+
+    .contact-content p {
+      color: var(--cream-muted);
+      max-width: 500px;
+    }
+
+    .contact-number {
+      color: var(--gold-light);
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      margin: 20px 0 28px;
+    }
+
+    .contact-action {
+      position: relative;
+      z-index: 1;
+    }
+
+    .whatsapp-button {
+      background: var(--whatsapp);
+      color: #062812;
+    }
+
+    .whatsapp-button:hover {
+      background: #63ec91;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(201, 164, 93, 0.18);
+      color: var(--cream-muted);
+      padding: 30px 0;
+    }
+
+    .footer-inner {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer p,
+    footer a {
+      font-size: 0.72rem;
+    }
+
+    footer a {
+      color: var(--gold-light);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        background: var(--black-soft);
+        border-bottom: 1px solid rgba(201, 164, 93, 0.2);
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        left: 0;
+        padding: 14px 20px 22px;
+        position: absolute;
+        right: 0;
+        top: 82px;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a {
+        border-bottom: 1px solid rgba(201, 164, 93, 0.1);
+        display: block;
+        padding: 16px 0;
+      }
+
+      .product-grid,
+      .packages .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-box {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 45px 30px;
+      }
+    }
+
+    @media (max-width: 570px) {
+      .container {
+        width: min(100% - 30px, 1180px);
+      }
+
+      .navbar {
+        min-height: 72px;
+      }
+
+      .brand-logo {
+        height: 45px;
+        width: 45px;
+      }
+
+      .brand-name {
+        font-size: 1.4rem;
+      }
+
+      .hero {
+        min-height: 620px;
+        padding: 110px 0 55px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.5rem, 16vw, 5rem);
+      }
+
+      .intro-strip-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .catalogue,
+      .packages,
+      .contact {
+        padding: 80px 0;
+      }
+
+      .product-grid,
+      .packages .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        height: 250px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Mima Textile home">
+          <!-- mima textile-logo.png -->
+          <img
+            class="brand-logo"
+            src="img/mima-textile-logo.png"
+            alt="Mima Textile logo"
+          />
+          <span>
+            <strong class="brand-name">Mima Textile</strong>
+            <small class="brand-subtitle">Luxury Home Textiles</small>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#catalogue">Catalogue</a></li>
+          <li><a href="#packages">Special Packages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Elevate your everyday living</div>
+
+          <h1>
+            Comfort,
+            <span>beautifully made.</span>
+          </h1>
+
+          <p class="hero-description">
+            Premium bedsheets, duvets, towels, and carefully selected home
+            textiles designed to bring warmth, elegance, and enduring comfort
+            into your space.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-gold" href="#catalogue">
+              Explore Catalogue
+            </a>
+            <a class="button button-outline" href="#packages">
+              View Packages
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="intro-strip">
+      <div class="container intro-strip-inner">
+        <p>Made for moments of comfort.</p>
+        <span>Order directly via WhatsApp</span>
+      </div>
+    </div>
+
+    <section class="catalogue" id="catalogue">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">The collection</div>
+          <h2>Textiles with a touch of luxury.</h2>
+          <p>
+            Explore our carefully presented collection. Product images and
+            pricing can be updated as your catalogue grows.
+          </p>
+        </div>
+
+        <div class="catalogue-group">
+          <h3 class="catalogue-group-title">Bedsheets</h3>
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-image"><img src="img/bedsheet-01.jpg.jpg" alt="Premium bedsheet set" /></div>
+              <div class="product-info">
+                <div class="product-category">Bedsheets</div>
+                <h3>Premium Bedsheet Set</h3>
+                <div class="product-price">4×6= #8,000 <br> 6×6= #10,000 <br>king/Queen size=#15,000</div>
+                <button class="button button-gold order-button" data-product="Premium Bedsheet Set">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/bedsheet-02.jpg.jpg" alt="Luxury cotton bedsheet" /></div>
+              <div class="product-info">
+                <div class="product-category">Bedsheets</div>
+                <h3>Luxury Cotton Bedsheet</h3>
+                <div class="product-price">4×6= #8,000 <br> 6×6= #10,000 <br>king/Queen size=#15,000</div>
+                <button class="button button-gold order-button" data-product="Luxury Cotton Bedsheet">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/bedsheet-03.jpg.jpg" alt="Satin bedsheet collection" /></div>
+              <div class="product-info">
+                <div class="product-category">Bedsheets</div>
+                <h3>Satin Bedsheet Collection</h3>
+                <div class="product-price">4×6= #10,000 <br> 6×6= #15,000 <br>king/Queen size=#20,000</div>
+                <button class="button button-gold order-button" data-product="Satin Bedsheet Collection">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/bedsheet-04.jpg.jpg" alt="Classic white bedsheet" /></div>
+              <div class="product-info">
+                <div class="product-category">Bedsheets</div>
+                <h3>Classic White Bedsheet</h3>
+                <div class="product-price">4×6= #8,000 <br> 6×6= #10,000 <br>king/Queen size=#15,000</div>
+                <button class="button button-gold order-button" data-product="Classic White Bedsheet">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/bedsheet-05.jpg.jpg" alt="Printed bedsheet set" /></div>
+              <div class="product-info">
+                <div class="product-category">Bedsheets</div>
+                <h3>Printed Bedsheet Set</h3>
+                <div class="product-price">4×6= #8,000 <br> 6×6= #10,000<br>King/Queen size=#15,000</div>
+                <button class="button button-gold order-button" data-product="Printed Bedsheet Set">Order on WhatsApp</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="catalogue-group">
+          <h3 class="catalogue-group-title">Duvets</h3>
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-image"><img src="img/Duvet-01.jgp.jpeg" alt="Soft comforter duvet" /></div>
+              <div class="product-info">
+                <div class="product-category">Duvets</div>
+                <h3>Soft Comforter Duvet</h3>
+                <div class="product-price">4×6= #35,000 <br> 6×6= #45,000</div>
+                <button class="button button-gold order-button" data-product="Soft Comforter Duvet">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/duvet-02.jgp.jpeg" alt="Premium duvet cover" /></div>
+              <div class="product-info">
+                <div class="product-category">Duvets</div>
+                <h3>Premium Duvet Cover</h3>
+                <div class="product-price">4×6= #35,000 <br> 6×6= #45,000</div>
+                <button class="button button-gold order-button" data-product="Premium Duvet Cover">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/duvet-03.jgp.jpg" alt="All-season duvet" /></div>
+              <div class="product-info">
+                <div class="product-category">Duvets</div>
+                <h3>All-Season Duvet</h3>
+                <div class="product-price">4×6= #35,000 <br> 6×6= #45,000</div>
+                <button class="button button-gold order-button" data-product="All-Season Duvet">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/duvet-04.jgp.jpg" alt="Luxury hotel duvet" /></div>
+              <div class="product-info">
+                <div class="product-category">Duvets</div>
+                <h3>Luxury Hotel Duvet</h3>
+                <div class="product-price">4×6= #35,000 <br> 6×6= #45,000</div>
+                <button class="button button-gold order-button" data-product="Luxury Hotel Duvet">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/Duvet-05.jgp.jpg" alt="Lightweight summer duvet" /></div>
+              <div class="product-info">
+                <div class="product-category">Duvets</div>
+                <h3>Lightweight Summer Duvet</h3>
+                <div class="product-price">4×6= #35,000 <br> 6×6= #45,000</div>
+                <button class="button button-gold order-button" data-product="Lightweight Summer Duvet">Order on WhatsApp</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="catalogue-group">
+          <h3 class="catalogue-group-title">Towels</h3>
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-image"><img src="img/towel-01.jpg.jpg" alt="Luxury bath towel" /></div>
+              <div class="product-info">
+                <div class="product-category">Towels</div>
+                <h3>Luxury Bath Towel</h3>
+                <div class="product-price">#19,500 </div>
+                <button class="button button-gold order-button" data-product="Luxury Bath Towel">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/towel-02.jpg.jpg" alt="Premium towel set" /></div>
+              <div class="product-info">
+                <div class="product-category">Towels</div>
+                <h3>Premium Towel Set</h3>
+                <div class="product-price"> #16,000</div>
+                <button class="button button-gold order-button" data-product="Premium Towel Set">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/towel-03.jpg.jpg" alt="Hotel hand towel set" /></div>
+              <div class="product-info">
+                <div class="product-category">Towels</div>
+                <h3>Hotel Hand Towel Set</h3>
+                <div class="product-price">#2,000</div>
+                <button class="button button-gold order-button" data-product="Hotel Hand Towel Set">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/towel-04.jpg.jpeg" alt="Spa towel collection" /></div>
+              <div class="product-info">
+                <div class="product-category">Towels</div>
+                <h3>Spa Towel Collection</h3>
+                <div class="product-price">#16,500</div>
+                <button class="button button-gold order-button" data-product="Spa Towel Collection">Order on WhatsApp</button>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><img src="img/towel-05.jpg.jpg" alt="Everyday towel bundle" /></div>
+              <div class="product-info">
+                <div class="product-category">Towels</div>
+                <h3>Everyday Towel Bundle</h3>
+                <div class="product-price">#16,000</div>
+                <button class="button button-gold order-button" data-product="Everyday Towel Bundle">Order on WhatsApp</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages" id="packages">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Curated combinations</div>
+          <h2>Special packages.</h2>
+          <p>
+            Beautifully paired essentials for gifting, refreshing your home,
+            or creating a complete bedroom experience.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card package-card">
+            <div class="product-image">
+              <div class="package-badge">Package 01</div>
+              <img src="img/insert%20image%2001.png" alt="Family Package 1 bedding and towel set" loading="lazy" />
+            </div>
+            <div class="product-info">
+              <div class="product-category">Bedroom Package</div>
+              <h3>Family Package 1</h3>
+              <div class="product-price">[#42,000]</div>
+              <button class="button button-gold order-button" data-product="Family Luxury Bedroom Package">
+                Order on WhatsApp
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card package-card">
+            <div class="product-image">
+              <div class="package-badge">Bedroom 02</div>
+              <img src="img/insert%20image%2002.png" alt="Family Package 2 bedding and towel set" loading="lazy" />
+            </div>
+            <div class="product-info">
+              <div class="product-category">Bedroom Package</div>
+              <h3>family package 2</h3>
+              <div class="product-price">[#60,000]</div>
+              <button class="button button-gold order-button" data-product="Bedroom Essentials Package">
+                Order on WhatsApp
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card package-card">
+            <div class="product-image">
+              <div class="package-badge">Package 03</div>
+              <img src="img/insert%20image%2003.png" alt="Luxury bath towel collection" loading="lazy" />
+            </div>
+            <div class="product-info">
+              <div class="product-category">Bath Package</div>
+              <h3>Luxury Bath Collection</h3>
+              <div class="product-price">[#75,000]</div>
+              <button class="button button-gold order-button" data-product="Luxury Bath Collection">
+                Order on WhatsApp
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card package-card">
+            <div class="product-image">
+              <div class="package-badge">Student 01</div>
+              <img src="img/insert%20image%2004.png" alt="Student bedding and towel package" loading="lazy" />
+            </div>
+            <div class="product-info">
+              <div class="product-category">Student Package</div>
+              <h3>Student Essentials Package</h3>
+              <div class="product-price">[#25,000]</div>
+              <button class="button button-gold order-button" data-product="Student Essentials Package">
+                Order on WhatsApp
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card package-card">
+            <div class="product-image">
+              <div class="package-badge">bachelor 01</div>
+              <img src="img/insert%20image%2005.png" alt="Bachelor bedding and towel package" loading="lazy" />
+            </div>
+            <div class="product-info">
+              <div class="product-category">bachelor Package</div>
+              <h3>bachelor package</h3>
+              <div class="product-price">[#36,000]</div>
+              <button class="button button-gold order-button" data-product="Student Comfort Package">
+                Order on WhatsApp
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-content">
+            <div class="eyebrow">Let’s make your space beautiful</div>
+            <h2>Have a question?</h2>
+            <p>
+              Speak with us directly for product enquiries, availability,
+              custom requests, and recommendations.
+            </p>
+            <a class="contact-number" href="tel:+2349038089426">
+              +234 903 808 9426
+            </a>
+          </div>
+
+          <div class="contact-action">
+            <a
+              class="button whatsapp-button"
+              href="https://wa.me/2349038089426?text=Hi%2C%20I%27d%20like%20to%20make%20an%20enquiry%20about%20Mima%20Textile%20products."
+              target="_blank"
+              rel="noopener"
+            >
+              Chat with us on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="current-year"></span> Mima Textile. All rights reserved.</p>
+      <a href="https://wa.me/2349038089426" target="_blank" rel="noopener">
+        WhatsApp: 09038089426
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const whatsappNumber = "2349038089426";
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealElements = document.querySelectorAll(
+      ".product-card, .section-heading, .contact-box, .intro-strip-inner"
+    );
+
+    if (!reduceMotion && "IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.14 }
+      );
+
+      revealElements.forEach((element) => {
+        element.classList.add("reveal");
+        revealObserver.observe(element);
+      });
+    }
+
+    document.querySelectorAll(".order-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const productName = button.dataset.product;
+        const message = `Hi, I'd like to order ${productName}.`;
+        const whatsappUrl =
+          `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+      });
+    });
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("is-open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+    });
+
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+      });
+    });
+
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
